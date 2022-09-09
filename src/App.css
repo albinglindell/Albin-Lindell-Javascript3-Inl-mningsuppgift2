@@ -1,38 +1,159 @@
-.App {
-  text-align: center;
-}
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+body::-webkit-scrollbar{
+  display: none;
 }
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.bold{
+  font-weight: bold;
 }
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.image{
+  width: 22vw;
+  padding: .7rem;
+}
+.Header{
   display: flex;
   flex-direction: column;
+  position: sticky;
+  top: 0;
+  background: white;
+}
+.Header.active .swishComponent, .Header.active .infoFlex{
+/* display: none; */
+font-size: 0px;
+transition: all .3s ease;
+}
+.swishComponent, .infoFlex{
+  transition: all .3s ease;
+  
+}
+.Header.active .image{
+  width: 15vw;
+}
+.HeaderTop{
+display: flex;
+}
+.HeaderStart{
+  width: 50%;
+}
+.infoFlex{
+  display: flex;
+  justify-content: space-around;
+  width: 70%;
+}
+.HeaderEndBtn{
+  display: flex;
+  width: 35%;
+  justify-content: space-between;
+  list-style: none; 
+}
+a{
+  text-decoration: none;
+}
+.HeaderEnd{
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;  
+}
+.gray{
+  color: rgb(79, 78, 78);
+  font-size: 13px;
+}
+.HeaderNavigation{
+  width: 100%;
+  display: flex;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  background: black;
+  color: #D8D8D8;
+  font-size: 12px;
+  height: 35px;
+}
+.NavigationText{
+  display: flex;
+  justify-content: space-between;
+  width: 50%;
 }
 
-.App-link {
-  color: #61dafb;
+/* Posts  */
+.landingPage{
+  margin-top: 3rem;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  
+}
+.posts{
+  border: 1px solid #B8C0C7;
+  width: 80%;
+  margin: 0 0 0 40px;
+  background: #EFF0F1;
+  display: flex;
+}
+.postTitle{
+  text-decoration: none;
+  color: black;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+/* UNIK POST */
+
+.category{
+  background: #333333;
+  width: 80%;
+  height: 35px;
+  color: #EAE7EA;
+  border-bottom: 4px solid #C10000;
+  display: flex;
+  align-items: center;
+  margin: 5rem 0 1rem 40px;
+}
+.boll{
+  background: #C10000;
+  width: 1.2vw;
+  border-radius: 100px;
+  aspect-ratio: 1;
+  margin: .5rem;
+}
+
+.unikPost{
+  width: 80%;
+  display: flex;
+  flex-direction: column;
+}
+.commentContainer{
+  display: flex;
+  justify-content: space-around;
+  border-top: 1.8rem solid #CCCCCC;
+  position: relative;
+  width: 80vw;
+  z-index: -1;
+}
+.commentName{
+  text-decoration: underline;
+  font-size: 16px;
+  font-weight: normal;
+}
+.commentEmail{
+  font-size: 14px;
+  font-weight: lighter;
+}
+.commentId{
+  position: absolute;
+  right: 2%;
+  top: -15.8%;
+
+}
+.commentInfoContainer{
+  background: #E3E3E3;
+  width: 20%;
+}
+.commentBodyContainer{
+  width: 80%;
+  background: #EFF0F1;
+}
+.commentInfoContainer,.commentBodyContainer{
+  height: 40vh;
+  padding: 1rem;
+} 
+.postBody, .postTitle{
+  padding: 0 0 0 40px;
 }
