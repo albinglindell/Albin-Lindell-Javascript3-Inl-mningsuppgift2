@@ -5,24 +5,24 @@ import {Link} from "react-router-dom"
 
 
 function Header() {
-    const [navbar, setNavbar] = useState(false)
+    // const [navbar, setNavbar] = useState(false)
 
-    const changeBackground = ()=>{
-        if(window.scrollY > 110){
-            setNavbar(true)
-            if(window.scrollY > 50){
-                setNavbar(true)
-            }
-        }else{
-            setNavbar(false)
+    // const changeBackground = ()=>{
+    //     if(window.scrollY > 110){
+    //         setNavbar(true)
+    //         if(window.scrollY > 50){
+    //             setNavbar(true)
+    //         }
+    //     }else{
+    //         setNavbar(false)
 
-        }
-    }
+    //     }
+    // }
 
-    window.addEventListener("scroll", changeBackground)
+    // window.addEventListener("scroll", changeBackground)
 
   return (
-<header className={navbar ? "Header active" : "Header"}>
+<header className={"Header"}>
     <div className="HeaderTop">
     <div className="HeaderStart">
     <Link to="/">

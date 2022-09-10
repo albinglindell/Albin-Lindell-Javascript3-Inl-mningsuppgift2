@@ -3,7 +3,6 @@ import {Link} from "react-router-dom"
 import {useState, useEffect} from "react"
 import axios from "axios"
 import Category from '../components/Category'
-import Post from './Post'
 
 
 function LandingPage() {

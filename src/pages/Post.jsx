@@ -9,20 +9,25 @@ import Category from '../components/Category'
 
 
 function Post({post}) {
-    const location = useLocation()
     const {id} = useParams()
     const [comment, setComment] = useState(null)
+    const [article, setArticle] = useState(null)
 
     useEffect(()=>{
         axios.get(`https://jsonplaceholder.typicode.com/comments/`)
         .then(res => setComment(res.data))
+        
+        axios.get(`https://jsonplaceholder.typicode.com/posts/${id}`)
+        .then(res => setArticle(res.data))
+
+
           },[])
   return (<>
   
   <Category />
     <div className='unikPost'>
-        <h1 className='postTitle'>{location.state?.title}</h1>
-        <h2 className='postBody'>{location.state?.body}</h2>
+        <h1 className='postTitle'>{article?.title}</h1>
+        <h2 className='postBody'>{article?.body}</h2>
         <ul>
           {comment && comment.map(user=>{
             if(user.postId == id){
