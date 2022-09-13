@@ -20,7 +20,6 @@ function Post({post}) {
         axios.get(`https://jsonplaceholder.typicode.com/posts/${id}`)
         .then(res => setArticle(res.data))
 
-
           },[])
   return (<>
   

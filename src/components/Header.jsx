@@ -10,9 +10,7 @@ function Header() {
     // const changeBackground = ()=>{
     //     if(window.scrollY > 110){
     //         setNavbar(true)
-    //         if(window.scrollY > 50){
-    //             setNavbar(true)
-    //         }
+         
     //     }else{
     //         setNavbar(false)
 
